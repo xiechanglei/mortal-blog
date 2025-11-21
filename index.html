@@ -1,13 +1,54 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mortal's Blog</title>
+    <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-<h1>欢迎来到Mortal的小站</h1>
-<p>这是一个示例页面。测试一下自动发布的功能</p>
+<!-- Header section -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <h1 class="site-title">Mortal's Blog</h1>
+            <nav class="nav">
+                <div class="nav-left">
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="搜索文章...">
+                        <button id="search-btn">搜索</button>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <a href="https://github.com" target="_blank" class="nav-link">GitHub</a>
+                    <a href="#" class="nav-link">关于</a>
+                    <a href="#" class="nav-link">联系</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Main content -->
+<main class="main">
+    <div class="container">
+        <section class="articles-section">
+            <h2>最新文章</h2>
+            <div id="articles-grid" class="articles-grid">
+                <!-- Articles will be loaded here dynamically -->
+                <p>加载中...</p>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Mortal's Blog. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="public/js/main.js" type="module"></script>
 </body>
 </html>
