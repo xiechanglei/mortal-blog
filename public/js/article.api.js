@@ -7,7 +7,7 @@ export const loadArticles = () => articleData
  * @param id {string} Article ID
  */
 export const fetchArticleDetail = (id) => {
-    new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         const article = articleData.find(a => a.slug === id);
         if (article) {
             resolve(article);
@@ -20,6 +20,6 @@ export const fetchArticleDetail = (id) => {
         }
         return response.text();
     }).then(markdownContent => {
-        return {...article, content: markdownContent};
+        return {content: markdownContent};
     });
 }
