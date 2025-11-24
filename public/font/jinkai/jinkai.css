@@ -1,0 +1,9 @@
+/* all glyphs fallback */
+@font-face {
+    font-family: 'TsangerJinKai02';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('tsanger-jinkai-w04-all.woff2') format('woff2');
+    unicode-range: U+0-10FFFF;
+}

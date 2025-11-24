@@ -1,0 +1,42 @@
+@import url("./github-markdown.css");
+@import url("./prism.min.css");
+
+.article-detail {
+    margin: 2rem auto;
+    padding: 0 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.article-header {
+    padding: 2rem;
+}
+
+.article-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.article-meta {
+    display: flex;
+    gap: 1.5rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.article-cover-detail {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 2rem;
+}
+
+.article-content img {
+    max-width: 100%;
+    height: auto;
+}

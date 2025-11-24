@@ -4,85 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="page-title">文章详情 - Mortal's Blog</title>
-    <link rel="stylesheet" href="/public/css/style.css">
-    <style>
-        .article-detail {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        .article-header {
-            padding: 2rem;
-            border-bottom: 1px solid #eee;
-        }
-
-        .article-title {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            color: #2c3e50;
-        }
-
-        .article-meta {
-            display: flex;
-            gap: 1.5rem;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .article-cover-detail {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-
-        .article-content {
-            padding: 2rem;
-        }
-
-        .article-content img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin: 1rem 0;
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="/public/css/base.css">
+    <link rel="stylesheet" href="/public/css/article.css">
+    <script src="/public/component/header.js" type="module"></script>
 </head>
 <body>
 <!-- Header section -->
-<header class="header">
-    <div class="container">
-        <div class="header-content">
-            <h1 class="site-title">Mortal's Blog</h1>
-            <nav class="nav">
-                <div class="nav-right">
-                    <a href="../index.html" class="nav-link">首页</a>
-                    <a href="https://github.com" target="_blank" class="nav-link">GitHub</a>
-                    <a href="#" class="nav-link">关于</a>
-                </div>
-            </nav>
-        </div>
-    </div>
-</header>
+<global-header></global-header>
 
 <!-- Main content -->
-<main class="main">
+<main class="main container">
     <article class="article-detail">
-        <a href="../index.html" class="back-link">&larr; 返回首页</a>
         <header class="article-header">
             <h1 class="article-title" id="article-title">加载中...</h1>
             <div class="article-meta">
@@ -91,18 +23,13 @@
             </div>
         </header>
         <img id="article-cover" class="article-cover-detail" src="" alt="文章封面" onerror="this.style.display='none';">
-        <div class="article-content" id="article-content">
+        <div class="article-content markdown-body" id="article-content" data-theme="dark">
             <p>加载中...</p>
         </div>
     </article>
 </main>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <p>&copy; 2025 Mortal's Blog. All rights reserved.</p>
-    </div>
-</footer>
-<script src="/public/js/article-detail.js" type="module"></script>
+<script src="/public/js/article.js" type="module"></script>
+
 </body>
 </html>
