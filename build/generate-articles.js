@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const matter = require('gray-matter');
 const showdown = require('showdown');
 
 const maxWord = 50;
@@ -29,7 +28,29 @@ function getMarkdownFiles(dir, files = []) {
 // Function to extract frontmatter and content from markdown file
 function extractArticleInfo(filePath) {
     const fileContent = fs.readFileSync(filePath, 'utf-8');
-    const {data, content} = matter(fileContent);
+    //  文件头部有个  <meta title="我的第一篇文章" date="2025-01-01" tags="生活，随笔" />， 从里面获取文件的描述性信息
+    const metaMatch = fileContent.match(/^<meta\s+([^>]+)\/?>/);
+    let data = {};
+    if (metaMatch) {
+        const metaString = metaMatch[1];
+        const attrRegex = /(\w+)=["']([^"']+)["']/g;
+        let match;
+        while ((match = attrRegex.exec(metaString)) !== null) {
+            const key = match[1];
+            let value = match[2];
+            // 如果是tags，转换成数组
+            if (key === 'tags') {
+                value = value.split('，').map(tag => tag.trim());
+            }
+            data[key] = value;
+        }
+    }
+
+    const html = converter.makeHtml(fileContent);
+    // 获取html中的文本内容
+    const content = html.replace(/<[^>]+>/g, '');
+    // 获取<meta ... />标签中的属性
+
 
     // Extract the relative path for the article
     const relativePath = path.relative('./articles', filePath);
@@ -39,10 +60,6 @@ function extractArticleInfo(filePath) {
     // Calculate word count
     const wordCount = content.trim() ? content.trim().split(/\s+/).length : 0;
 
-    // Get file modification time
-    const stats = fs.statSync(filePath);
-    const modTime = stats.mtime.toISOString();
-
     // Extract the first few lines as preview (without markdown syntax)
     const previewLines = content.split('\n').filter(line => line.trim() !== '').slice(0, 5);
     const preview = previewLines.join(' ').substring(0, maxWord) + '...';
@@ -50,7 +67,7 @@ function extractArticleInfo(filePath) {
     return {
         title: data.title,
         filePath: relativePath,
-        cover: data.cover || data.image || '',
+        cover: data.cover,
         date: data.date,
         wordCount: wordCount,
         preview: preview,

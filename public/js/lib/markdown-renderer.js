@@ -1,27 +1,24 @@
 import {marked} from "./marked.esm.js";
-import  "./prism/prism-core.min.js";
+import "./prism/prism-core.min.js";
 import "./prism/prism-autoloader.min.js"
 
-Prism.plugins.autoloader.languages_path = "/public/js/lib/prism/";
-console.log(Prism.plugins.autoloader);
-// init marked
-marked.setOptions({
-    highlight: function (code, lang) {
-        if (Prism.languages[lang]) {
-            return Prism.highlight(code, Prism.languages[lang], lang);
-        } else {
-            return code;
-        }
-    }
-});
-
+Prism.manual = true;
+Prism.plugins.autoloader.languages_path = "/public/js/lib/prism/components/";
 
 
 /**
  * Decode HTML entities in the content
  * @param markdownText {string} Encoded markdown content
- * @return string
+ * @return element {HTMLElement}
  */
 export const renderMarkdown = (markdownText) => {
-    return marked.parse(markdownText)
+    const html = marked.parse(markdownText);
+    const root = document.createElement('div')
+    root.classList.add("markdown-body")
+    root.style.display = "none";
+    root.innerHTML = html
+    Prism.highlightAllUnder(root, true, () => {
+        root.style.display = "block";
+    });
+    return root
 }

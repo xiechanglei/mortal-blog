@@ -39,7 +39,7 @@ pre[class*=language-] {
 }
 
 :not(pre) > code[class*=language-], pre[class*=language-] {
-    background: #f5f2f0
+    background: #3d444d;
 }
 
 :not(pre) > code[class*=language-] {
@@ -70,7 +70,6 @@ pre[class*=language-] {
 
 .language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url {
     color: #9a6e3a;
-    background: hsla(0, 0%, 100%, .5)
 }
 
 .token.atrule, .token.attr-value, .token.keyword {
