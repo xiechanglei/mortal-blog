@@ -20,9 +20,10 @@ class HeaderComponent extends HTMLElement {
                         <slot />
                     </div>
                     <div class="nav-right">
-                        <a href="https://github.com" target="_blank" class="nav-link">GitHub</a>
+                        <a href="https://github.com/xiechanglei/mortal-blog" target="_blank" class="nav-link">GitHub</a>
                         <a href="#" class="nav-link">关于</a>
                         <a href="#" class="nav-link">联系</a>
+                        <a href="https://music.163.com/#/playlist?id=14231616354" class="nav-link">歌单</a>
                     </div>
                 </nav>
             </div>
