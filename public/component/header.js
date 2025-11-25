@@ -23,7 +23,7 @@ class HeaderComponent extends HTMLElement {
                         <a href="https://github.com/xiechanglei/mortal-blog" target="_blank" class="nav-link">GitHub</a>
                         <a href="#" class="nav-link">关于</a>
                         <a href="#" class="nav-link">联系</a>
-                        <a href="https://music.163.com/#/playlist?id=14231616354" class="nav-link">歌单</a>
+                        <a href="https://music.163.com/#/playlist?id=14231616354" target="_blank" class="nav-link">歌单</a>
                     </div>
                 </nav>
             </div>
