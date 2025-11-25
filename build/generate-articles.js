@@ -60,17 +60,13 @@ function extractArticleInfo(filePath) {
     // Calculate word count
     const wordCount = content.replace(/\s+/g, ' ').trim().length;
 
-    // Extract the first few lines as preview (without markdown syntax)
-    const previewLines = content.split('\n').filter(line => line.trim() !== '').slice(0, 5);
-    const preview = previewLines.join(' ').substring(0, maxWord) + '...';
-
     return {
         title: data.title,
         filePath: relativePath,
         cover: data.cover,
         date: data.date,
         wordCount: wordCount,
-        preview: preview,
+        preview: data.desc,
         tags: data.tags || []
     };
 }
