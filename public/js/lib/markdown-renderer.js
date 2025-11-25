@@ -15,10 +15,7 @@ export const renderMarkdown = (markdownText) => {
     const html = marked.parse(markdownText);
     const root = document.createElement('div')
     root.classList.add("markdown-body")
-    root.style.display = "none";
     root.innerHTML = html
-    Prism.highlightAllUnder(root, true, () => {
-        root.style.display = "block";
-    });
+    Prism.highlightAllUnder(root, true);
     return root
 }

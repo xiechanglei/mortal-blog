@@ -12,13 +12,12 @@ async function loadArticleDetail() {
     const slug = getUrlParameter('slug');
     try {
         const markdownResponse = await fetchArticleDetail(slug);
-        console.log(markdownResponse)
-
         document.getElementById('article-title').textContent = markdownResponse.title;
         document.getElementById('page-title').textContent = `${markdownResponse.title} - Mortal's Blog`;
         document.getElementById('article-date').textContent = markdownResponse.date;
         document.getElementById('article-word-count').textContent = `${markdownResponse.wordCount} 字`;
-        document.getElementById('article-content').innerHTML = "";
+        document.getElementById('article-tags').textContent = `${markdownResponse.tags.join(" ")}`;
+        document.getElementById("article-cover").src = markdownResponse.cover;
         document.getElementById('article-content').append(renderMarkdown(markdownResponse.content))
     } catch (error) {
         console.error('Error loading article detail:', error);

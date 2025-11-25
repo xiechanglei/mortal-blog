@@ -500,7 +500,7 @@
 .markdown-body pre,
 .markdown-body details {
     margin-top: 0;
-    margin-bottom: var(--base-size-16);
+    margin-bottom: var(--base-size-40);
 }
 
 .markdown-body blockquote > :first-child {

@@ -2,9 +2,11 @@
 
 :root{
     --theme-bg:#21262b;
+    --theme-header-bg:transparent;
     --theme-text:#e7e9ea;
     --theme-meta:#7f8c8d;
     --theme-width:1200px;
+    --theme-block-bg:#2d333b;
     font-size:14px;
 }
 /* Reset and base styls */
@@ -38,7 +40,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: var(--theme-bg);
+    background: var(--theme-header-bg);
     padding: 0 2rem;
 }
 
@@ -106,6 +108,18 @@ body {
 /* Main content styles */
 .main {
     padding: 2rem;
+}
+
+.global-bg {
+    object-fit: cover;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100dvh;
+    position: fixed;
+    z-index:-1;
+    filter: brightness(0.3) blur(10px);
 }
 
 /* Responsive design */

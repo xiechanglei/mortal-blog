@@ -12,6 +12,7 @@ import {allArticles} from "./api/article.api.js"
  */
 const renderArticle = (article) => {
     return `<div class="article-card">
+        <span class="article-tags">${article.tags.join(" ")}</span>
         <img src="${article.cover}" alt="${article.title}" class="article-cover">
         <div class="article-info">
             <h3 class="article-title">
@@ -61,11 +62,11 @@ const performSearch = (searchTerm) => {
 
 // 页面加载完成后绑定事件
 document.addEventListener('DOMContentLoaded', function () {
-    const searchBtn = document.querySelector('.search-btn');
-    const searchInput = document.querySelector('.search-input');
+    // const searchBtn = document.querySelector('.search-btn');
+    // const searchInput = document.querySelector('.search-input');
 
-    searchBtn.addEventListener('click', performSearch);
-    searchInput.addEventListener('keypress', (e) => e.key === 'Enter' && performSearch(e.currentTarget.value));
+    // searchBtn.addEventListener('click', performSearch);
+    // searchInput.addEventListener('keypress', (e) => e.key === 'Enter' && performSearch(e.currentTarget.value));
 
     performSearch("")
 
@@ -75,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (card) {
             const link = card.querySelector('.article-title a');
             if (link) {
-                window.location.href = link.href;
+                window.open(link.href, '_blank');
             }
         }
     });

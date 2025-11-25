@@ -58,7 +58,7 @@ function extractArticleInfo(filePath) {
     const slug = fileName.replace('.md', '');
 
     // Calculate word count
-    const wordCount = content.trim() ? content.trim().split(/\s+/).length : 0;
+    const wordCount = content.replace(/\s+/g, ' ').trim().length;
 
     // Extract the first few lines as preview (without markdown syntax)
     const previewLines = content.split('\n').filter(line => line.trim() !== '').slice(0, 5);

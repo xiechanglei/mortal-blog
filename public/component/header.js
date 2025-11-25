@@ -11,8 +11,9 @@ class HeaderComponent extends HTMLElement {
         this.attachShadow({mode: 'open'});
         this.shadowRoot.adoptedStyleSheets = [styles];
         this.shadowRoot.innerHTML = `
-       <header class="header container">
-            <div class="header-content">
+       <header class="header">
+       <div class="container">
+           <div class="header-content">
                 <h1 class="site-title">Mortal's Blog</h1>
                 <nav class="nav">
                     <div class="nav-left">
@@ -25,6 +26,7 @@ class HeaderComponent extends HTMLElement {
                     </div>
                 </nav>
             </div>
+        </div>
         </header>
         `;
     }
