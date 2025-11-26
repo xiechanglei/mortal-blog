@@ -27,7 +27,7 @@
     font-size: 11px;
     padding: 0 8px;
     border-bottom-right-radius: 4px;
-    background: #ab7df8;
+    background: var(--theme-highlight);
 }
 
 .article-card:hover {

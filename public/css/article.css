@@ -8,10 +8,6 @@
     overflow: hidden;
 }
 
-.article-header {
-    padding: 2rem;
-}
-
 .article-title {
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -26,7 +22,7 @@
 }
 
 .article-content {
-    padding: 0 2rem 2rem;
+    padding: 2rem 0;
 }
 
 .article-content img {
