@@ -1,0 +1,1 @@
+ffmpeg -i 8151357-Hello-World-Wallpaper.jpg -vf "scale=960:540" output.jpg

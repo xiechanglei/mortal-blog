@@ -17,9 +17,12 @@
 - 静态资源看看做个cdn加速
 - 美化滚动条
 
-一些命令，留备使用：
+## 联系方式
 
-```shell
-# 生成缩略图
-ffmpeg -i 8151357-Hello-World-Wallpaper.jpg -vf "scale=960:540" output.jpg
-```
+如果关于网站你有什么建议，或者想找个人聊聊，可以通过以下方式联系我：
+
+<img src="/public/images/wechat.png" width="250" height="250" alt="wechat"/>
+
+## 项目地址
+
+[https://github.com/xiechanglei/mortal-blog](https://github.com/xiechanglei/mortal-blog)
