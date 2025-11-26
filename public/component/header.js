@@ -36,7 +36,7 @@ class HeaderComponent extends HTMLElement {
         const navLinks = this.shadowRoot.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             const linkPath = new URL(link.href).pathname;
-            if (linkPath === currentPath) {
+            if (linkPath === currentPath || (currentPath + ".html") === linkPath) { // cloudflare pages会自动去掉.html后缀
                 link.classList.add('active');
                 link.removeAttribute('href'); // 移除链接，点击无效
             }
