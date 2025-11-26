@@ -1,5 +1,5 @@
 import {getMarkdownContent} from "./api/article.api.js"
-import {renderMarkdown} from "./lib/markdown-renderer.js";
+import {renderMarkdown} from "/lib/markdown-renderer.js";
 
 // Function to load the specific article detail
 async function loadAboutDetail() {

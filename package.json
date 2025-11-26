@@ -7,10 +7,15 @@
     "build": "node build/generate-articles.js",
     "dev": "npm run build && npx http-server ./"
   },
-  "keywords": ["blog", "personal", "static-site"],
+  "keywords": [
+    "blog",
+    "personal",
+    "static-site"
+  ],
   "author": "Mortal",
   "license": "MIT",
   "dependencies": {
+    "qiniu": "^7.14.0",
     "showdown": "^2.1.0"
   },
   "devDependencies": {

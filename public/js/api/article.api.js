@@ -1,4 +1,4 @@
-import articleData from "./article-data.js";
+import articleData from "/data/article-data.js";
 
 /**
  * {import('../types/def').Article} Article

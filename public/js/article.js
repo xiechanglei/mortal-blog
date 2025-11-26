@@ -1,5 +1,5 @@
 import {fetchArticleDetail} from "./api/article.api.js"
-import {renderMarkdown} from "./lib/markdown-renderer.js";
+import {renderMarkdown} from "/lib/markdown-renderer.js";
 
 // Article detail JavaScript file
 function getUrlParameter(name) {
