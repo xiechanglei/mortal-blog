@@ -93,7 +93,7 @@ function processArticles() {
     }
 
     // Write the index.json file with all article information
-    fs.writeFileSync('./public/js/api/article-data.js', `const allArticles = ${JSON.stringify(articles, null, 4)};
+    fs.writeFileSync('./data/article-data.js', `const allArticles = ${JSON.stringify(articles, null, 4)};
 
 export default allArticles;`);
 

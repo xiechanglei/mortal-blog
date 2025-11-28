@@ -10,6 +10,10 @@ import articleData from "/data/article-data.js";
  */
 export const allArticles = articleData
 
+export const getArticleTags = ()=>{
+
+}
+
 /**
  * Fetch article detail by ID
  * @param id {string} Article ID

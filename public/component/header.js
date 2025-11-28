@@ -16,11 +16,8 @@ class HeaderComponent extends HTMLElement {
            <div class="header-content">
                 <h1 class="site-title">Mortal's Blog</h1>
                 <nav class="nav">
-                    <div class="nav-left">
-                        <slot />
-                    </div>
                     <div class="nav-right">
-                        <a href="/index.html" class="nav-link site">首页</a>
+                        <a href="/" class="nav-link site">首页</a>
                         <a href="/pages/about.html" class="nav-link site">关于</a>
                         <a href="https://github.com/xiechanglei/mortal-blog" target="_blank" class="nav-link">GitHub</a>
                         <a href="https://music.163.com/#/playlist?id=14231616354" target="_blank" class="nav-link">歌单</a>
