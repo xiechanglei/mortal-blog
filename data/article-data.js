@@ -1,7 +1,7 @@
 const allArticles = [
     {
-        "title": "Empty",
-        "filePath": "0001.2025-empty.md",
+        "title": "开篇",
+        "filePath": "0001.2025-start.md",
         "cover": "/covers/hello-world.jpg",
         "date": "2025-11-25",
         "wordCount": 957,
