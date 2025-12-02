@@ -82,7 +82,7 @@ function processArticles() {
     const articles = markdownFiles.map(filePath => {
         console.log(`Processing: ${filePath}`);
         return extractArticleInfo(filePath);
-    });
+    }).sort((a, b) => new Date(b.date) - new Date(a.date));
 
     // Sort articles by modification date (newest first)
     articles.sort((a, b) => new Date(b.modified) - new Date(a.modified));
