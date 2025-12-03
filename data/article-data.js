@@ -4,8 +4,8 @@ const allArticles = [
         "filePath": "0002.2025-how-to-live.md",
         "cover": "/covers/dongxiexidu.jpg",
         "date": "2025-12-02",
-        "wordCount": 751,
-        "preview": "以前看见山，就想知道山的后面是什么，我现在我不想知道了。",
+        "wordCount": 750,
+        "preview": "以前看见山，就想知道山的后面是什么，现在我不想知道了。",
         "tags": [
             "随笔"
         ]
