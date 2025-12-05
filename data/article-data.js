@@ -1,5 +1,16 @@
 const allArticles = [
     {
+        "title": "诗",
+        "filePath": "0003.2025-gushi.md",
+        "cover": "/covers/libai.jpg",
+        "date": "2025-12-05",
+        "wordCount": 1052,
+        "preview": "朝辞白帝彩云间，千里江陵一日还，两岸猿声啼不住，轻舟已过万重山",
+        "tags": [
+            "随笔"
+        ]
+    },
+    {
         "title": "《2025年终总结》",
         "filePath": "0002.2025-how-to-live.md",
         "cover": "/covers/dongxiexidu.jpg",
